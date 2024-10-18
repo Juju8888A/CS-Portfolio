@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$font-1: "Montserrat", sans-serif;
+$color-1: #53195d;
+$color-2: #fefcff;
+$color-3: #f7def8;
+$color-4: #deade3;
+$color-5: #ab4aba;
+$color-6: #953ea3;
+
+.global_container_app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-1;
+  color: $color-1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
