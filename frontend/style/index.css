@@ -24,4 +24,89 @@ a {
 
 footer {
   margin-top: auto;
+}
+
+.navbar_container {
+  background-color: #f7def8;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.logo a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.logo a img {
+  width: 80px;
+  border-radius: 500px;
+}
+.logo a h1 {
+  font-size: 1.8rem;
+  font-family: "Delius", sans-serif;
+  font-weight: 100;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+nav ul li {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .navbar_container {
+    gap: 30px;
+  }
+  .logo a img {
+    width: 70px;
+  }
+  .logo a h1 {
+    font-size: 1.6rem;
+  }
+  nav ul {
+    align-items: center;
+  }
+  nav ul li {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1300px) and (max-width: 1024px) {
+  .navbar_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .logo a {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  nav ul {
+    display: flex;
+    gap: 40px;
+  }
+  nav ul li {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1300px) and (max-width: 768px) {
+  .logo a img {
+    width: 50px;
+  }
+  .logo a h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  nav ul li {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=index.css.map */

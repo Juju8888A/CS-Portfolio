@@ -1,0 +1,121 @@
+// ------------------------- header ---------------------------------
+
+.navbar_container {
+  background-color: $color-3;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+// ---------------------- logo / h1 ---------------------------------
+
+.logo {
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    img {
+      width: 80px;
+      border-radius: 500px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-family: $font-2;
+      font-weight: 100;
+    }
+  }
+}
+
+// --------------------------- nav ----------------------------------
+
+nav {
+  display: flex;
+  align-items: center;
+  ul {
+    display: flex;
+    gap: 40px;
+
+    li {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+//------------------------- MEDIA QUERIES -------------------------------
+
+@media screen and (max-width: 1300px) {
+  .navbar_container {
+    gap: 30px;
+  }
+  .logo {
+    a {
+      img {
+        width: 70px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  nav {
+    ul {
+      align-items: center;
+      li {
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .navbar_container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo {
+      a {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+
+    // --------------------------- nav ----------------------------------
+
+    nav {
+      ul {
+        display: flex;
+        gap: 40px;
+
+        li {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .logo {
+      a {
+        img {
+          width: 50px;
+        }
+        h1 {
+          font-size: 1.4rem;
+          text-align: center;
+        }
+      }
+    }
+    nav {
+      ul {
+        li {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
