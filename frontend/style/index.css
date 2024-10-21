@@ -27,7 +27,7 @@ footer {
 }
 
 .navbar_container {
-  background-color: #f7def8;
+  background-color: #fefcff;
   display: flex;
   justify-content: space-between;
   padding: 10px 30px;
@@ -38,6 +38,7 @@ footer {
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  color: #53195d;
 }
 .logo a img {
   width: 80px;
@@ -47,18 +48,25 @@ footer {
   font-size: 1.8rem;
   font-family: "Delius", sans-serif;
   font-weight: 100;
+  color: #53195d;
 }
 
-nav {
+.menu_container {
+  display: flex;
+}
+.menu_container nav {
   display: flex;
   align-items: center;
 }
-nav ul {
+.menu_container nav ul {
   display: flex;
   gap: 40px;
 }
-nav ul li {
+.menu_container nav ul li {
   font-size: 1.2rem;
+}
+.menu_container nav ul li a {
+  color: #53195d;
 }
 
 @media screen and (max-width: 1300px) {
@@ -71,10 +79,10 @@ nav ul li {
   .logo a h1 {
     font-size: 1.6rem;
   }
-  nav ul {
+  .menu_container nav ul {
     align-items: center;
   }
-  nav ul li {
+  .menu_container nav ul li {
     font-size: 1rem;
     text-align: center;
   }
@@ -90,15 +98,30 @@ nav ul li {
     align-items: center;
     gap: 20px;
   }
-  nav ul {
+  .menu_container nav ul {
     display: flex;
     gap: 40px;
   }
-  nav ul li {
+  .menu_container nav ul li {
     font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 1300px) and (max-width: 768px) {
+  .navbar_container {
+    padding-bottom: 0;
+  }
+  .menu_container nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu_container nav ul {
+    gap: 20px;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  .menu_container nav ul li {
+    font-size: 1rem;
+  }
   .logo a img {
     width: 50px;
   }
@@ -106,7 +129,111 @@ nav ul li {
     font-size: 1.4rem;
     text-align: center;
   }
-  nav ul li {
-    font-size: 1rem;
+}
+#btn-burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#icone_close {
+  color: #53195d;
+  display: none;
+}
+
+#icone_burger {
+  color: #53195d;
+}
+
+@media screen and (max-width: 768px) {
+  #btn-burger-menu {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .menu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+  }
+}
+@media screen and (min-width: 769px) {
+  #btn-burger-menu {
+    display: none;
+  }
+}
+.carousel_container {
+  height: 1000px;
+  width: 100%;
+  position: relative;
+}
+.carousel_container button {
+  position: absolute;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 3rem;
+  z-index: 2;
+  cursor: pointer;
+  color: #fefcff;
+  transform: translateY(-50%);
+  top: 50%;
+}
+.carousel_container #prev {
+  left: 20px;
+}
+.carousel_container #next {
+  right: 20px;
+}
+.carousel_container .slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+  z-index: 0;
+}
+.carousel_container .slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carousel_container .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1300px) {
+  .carousel_container {
+    height: 800px;
+  }
+  .carousel_container button {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .carousel_container {
+    height: 600px;
+    margin-top: 15px;
+  }
+  .carousel_container button {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel_container {
+    height: 400px;
+    margin-top: 0;
+  }
+  .carousel_container button {
+    font-size: 1.5rem;
   }
 }/*# sourceMappingURL=index.css.map */

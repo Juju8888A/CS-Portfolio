@@ -1,7 +1,7 @@
 // ------------------------- header ---------------------------------
 
 .navbar_container {
-  background-color: $color-3;
+  background-color: $color-2;
   display: flex;
   justify-content: space-between;
   padding: 10px 30px;
@@ -15,6 +15,7 @@
     flex-direction: row;
     align-items: center;
     gap: 20px;
+    color: $color-1;
 
     img {
       width: 80px;
@@ -25,21 +26,29 @@
       font-size: 1.8rem;
       font-family: $font-2;
       font-weight: 100;
+      color: $color-1;
     }
   }
 }
 
 // --------------------------- nav ----------------------------------
 
-nav {
+.menu_container {
   display: flex;
-  align-items: center;
-  ul {
+  nav {
     display: flex;
-    gap: 40px;
+    align-items: center;
+    ul {
+      display: flex;
+      gap: 40px;
 
-    li {
-      font-size: 1.2rem;
+      li {
+        font-size: 1.2rem;
+
+        a {
+          color: $color-1;
+        }
+      }
     }
   }
 }
@@ -62,12 +71,14 @@ nav {
     }
   }
 
-  nav {
-    ul {
-      align-items: center;
-      li {
-        font-size: 1rem;
-        text-align: center;
+  .menu_container {
+    nav {
+      ul {
+        align-items: center;
+        li {
+          font-size: 1rem;
+          text-align: center;
+        }
       }
     }
   }
@@ -87,18 +98,37 @@ nav {
 
     // --------------------------- nav ----------------------------------
 
-    nav {
-      ul {
-        display: flex;
-        gap: 40px;
+    .menu_container {
+      nav {
+        ul {
+          display: flex;
+          gap: 40px;
 
-        li {
-          font-size: 1.2rem;
+          li {
+            font-size: 1.2rem;
+          }
         }
       }
     }
   }
   @media screen and (max-width: 768px) {
+    .navbar_container {
+      padding-bottom: 0;
+    }
+    .menu_container {
+      nav {
+        display: flex;
+        flex-direction: column;
+        ul {
+          gap: 20px;
+          flex-direction: column;
+          margin: 15px 0;
+          li {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
     .logo {
       a {
         img {
@@ -110,12 +140,48 @@ nav {
         }
       }
     }
-    nav {
-      ul {
-        li {
-          font-size: 1rem;
-        }
-      }
-    }
+  }
+}
+
+// ----------------------------------------- MENU BURGER ---------------------------------------------
+
+#btn-burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#icone_close {
+  color: $color-1;
+  display: none;
+}
+#icone_burger {
+  color: $color-1;
+}
+
+@media screen and (max-width: 768px) {
+  #btn-burger-menu {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .menu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #btn-burger-menu {
+    display: none;
   }
 }
