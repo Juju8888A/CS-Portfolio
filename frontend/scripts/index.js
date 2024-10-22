@@ -4,7 +4,6 @@
 
 const slideButtons = document.querySelectorAll(".btn_carousel");
 const slideImages = document.querySelectorAll(".slide");
-console.log(slideImages);
 
 slideButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
@@ -48,3 +47,34 @@ btnMenu.addEventListener("click", () => {
     iconeClose.style.display = "none";
   }
 });
+
+/*----------------------------------------------------------------------------------
+------------------------------------ GALLERY ---------------------------------------
+-----------------------------------------------------------------------------------*/
+
+const popupBg = document.getElementById("popup_background");
+const popupImg = document.getElementById("popup_img");
+const galleryItems = [...document.querySelectorAll(".grid_item")];
+const galleryImg = [...document.querySelectorAll(".grid_img")];
+const btnClosePopup = document.getElementById("popup_close");
+
+function openImg(e) {
+  let gridItemClicked = e.target.closest(".grid_item");
+  let clickedImageName = gridItemClicked.id;
+  let imageAlt = e.target.alt;
+  popupBg.classList.add("active");
+  popupImg.src = `/frontend/assets/img/works/${clickedImageName}.webp`;
+  popupImg.alt = imageAlt;
+}
+
+function closeImg() {
+  popupBg.classList.remove("active");
+}
+
+galleryItems.forEach((image) => {
+  image.addEventListener("click", openImg);
+});
+
+popupImg.addEventListener("click", (e) => e.stopPropagation());
+btnClosePopup.addEventListener("click", closeImg);
+popupBg.addEventListener("click", closeImg);

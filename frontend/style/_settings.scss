@@ -14,12 +14,14 @@ $color-5: #ab4aba;
 $color-6: #953ea3;
 
 .global_container_app {
+  position: relative;
   min-height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   font-family: $font-1;
   color: $color-1;
-
+  background-color: $color-2;
 }
 
 ul {
@@ -32,9 +34,9 @@ a {
   text-decoration: none;
 }
 
-h2{
-   font-size: 2rem;
-   display: flex;
-   justify-content: center;
-   margin: 100px 0;
+h2 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
 }
