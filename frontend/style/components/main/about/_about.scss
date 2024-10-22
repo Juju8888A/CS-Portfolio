@@ -1,0 +1,28 @@
+.about_container {
+  display: flex;
+  gap: 80px;
+  margin: 0 100px;
+
+  .about_text_container {
+    display: flex;
+    width: 50%;
+    align-items: center;
+  }
+  .about_text {
+    font-size: 1.5rem;
+    line-height: 40px;
+    text-align: justify;
+  }
+
+  .about_img_container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
+    img {
+      width: 80%;
+      object-fit: cover;
+      border-radius: 50px;
+    }
+  }
+}
