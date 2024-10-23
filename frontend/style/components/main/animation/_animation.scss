@@ -1,4 +1,5 @@
 #animation {
+  padding: 0 20px;
   p {
     display: flex;
     justify-content: center;
@@ -11,26 +12,57 @@
   .ballet_img {
     display: flex;
     justify-content: center;
-    position:relative;
+    position: relative;
 
     #img_dancing {
       width: 100%;
+      border-radius: 20px;
       filter: drop-shadow(0 0 10px $color-1);
-        }
-
-    #icone_play{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 7rem;
-        opacity: 0.4;
-        color: white;
-        transition: opacity 0.2s ease;
     }
-    #icone_play:hover{
-        opacity: 0.6;
-        color: white;
+
+    #icone_play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 7rem;
+      opacity: 0.4;
+      color: white;
+      transition: opacity 0.2s ease;
+    }
+
+    #icone_play:hover {
+      opacity: 0.6;
+      color: white;
+    }
+  }
+}
+
+//------------------------- MEDIA QUERIES -------------------------------
+
+@media screen and (max-width: 1024px) {
+  #animation {
+    .ballet_img {
+      #icone_play {
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #animation {
+    p {
+      font-size: 1.2rem;
+      gap: 0px;
+      margin-bottom: 40px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .ballet_img {
+      #icone_play {
+        font-size: 3rem;
+      }
     }
   }
 }
