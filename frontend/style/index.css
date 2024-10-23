@@ -53,6 +53,7 @@ footer {
 .logo a img {
   width: 80px;
   border-radius: 500px;
+  box-shadow: 0px 5px 10px 1px rgba(43, 4, 53, 0.2);
 }
 .logo a h1 {
   font-size: 1.8rem;
@@ -182,6 +183,7 @@ footer {
   height: 1000px;
   width: 100%;
   position: relative;
+  box-shadow: 0px 5px 10px 1px rgba(43, 4, 53, 0.2);
 }
 .carousel_container button {
   position: absolute;
@@ -367,4 +369,35 @@ footer {
   #illustration-5 {
     grid-row: span 1;
   }
+}
+#animation p {
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 70px;
+}
+#animation .ballet_img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#animation .ballet_img #img_dancing {
+  width: 100%;
+  filter: drop-shadow(0 0 10px #53195d);
+}
+#animation .ballet_img #icone_play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  opacity: 0.4;
+  color: white;
+  transition: opacity 0.2s ease;
+}
+#animation .ballet_img #icone_play:hover {
+  opacity: 0.6;
+  color: white;
 }/*# sourceMappingURL=index.css.map */

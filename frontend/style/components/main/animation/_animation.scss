@@ -1,0 +1,36 @@
+#animation {
+  p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 70px;
+  }
+
+  .ballet_img {
+    display: flex;
+    justify-content: center;
+    position:relative;
+
+    #img_dancing {
+      width: 100%;
+      filter: drop-shadow(0 0 10px $color-1);
+        }
+
+    #icone_play{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 7rem;
+        opacity: 0.4;
+        color: white;
+        transition: opacity 0.2s ease;
+    }
+    #icone_play:hover{
+        opacity: 0.6;
+        color: white;
+    }
+  }
+}
