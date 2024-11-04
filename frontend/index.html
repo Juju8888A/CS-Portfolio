@@ -137,30 +137,23 @@
             <section id="contact">
                 <h2>Contact</h2>
                 <div class="group_contact_container">
-                    <div class="infos_contact_container">
-                        <ul>
-                            <li>Telephone</li>
-                            <li>Mail</li>
-                        </ul>
-                        <a href="">LinkedIn</a>
-                        <a href="">Instagram</a>
-                    </div>
                     <div class="form_container">
                         <form action="#" method="#" class="form_contact">
                             <div class="form_infos_container">
                                 <div class="form_name">
                                     <label for="name">Name</label>
-                                    <input type="text" name="name" id="name" required />
+                                    <input type="text" name="name" id="name" class="border_clic" required />
                                 </div>
                                 <div class="form_email">
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" required />
+                                    <input type="email" name="email" class="border_clic" id="email" required />
+                                    <span id="error_email"></span>
                                 </div>
                             </div>
                             <div class="form_message_container">
                                 <div class="form_message">
                                     <label for="message">Message</label>
-                                    <textarea id="text" content=""></textarea>
+                                    <textarea id="message" content="" class="border_clic"></textarea>
                                 </div>
                             </div>
                             <div class="form_submit">
@@ -168,12 +161,24 @@
                             </div>
                         </form>
                     </div>
+                    <div class="link_contact">
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/catherine-soreau-a88657183/" target="_blank"><i
+                                        class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.instagram.com/dreamshaperzorro?igsh=Mm9kY2djcDU2eGI=
+                                " target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                        <p>© 2024 - Juliette Jourdan</p>
+                    </div>
                 </div>
             </section>
         </footer>
     </div>
 
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/form.js"></script>
 </body>
 
 </html>
